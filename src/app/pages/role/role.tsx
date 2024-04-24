@@ -1,12 +1,12 @@
 import styles from './role.module.scss'
 import {useEffect, useState} from "react";
-import {Role} from "@/types/role"
+import {Role as RoleType} from "@/types/role"
 import {getRoleList} from "@/apis";
 import {RoleContext, RoleList} from "@/app/components/role/role-list";
 import {Outlet} from "react-router-dom";
 
 export function Role() {
-    const [roles, setRoles] = useState<Role[]>([])
+    const [roles, setRoles] = useState<RoleType[]>([])
     const [selected, setSelected] = useState<number>(-1);
 
     useEffect(() => {
